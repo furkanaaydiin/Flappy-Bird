@@ -2,24 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn_Controller : MonoBehaviour
+public class SpawnController : MonoBehaviour
 {
     public GameObject pipeSpawn;
     public float maxY;
     public float minY;
-
     public float x;
     
     public float interval;
 
-
-    
     private void Start()
     {
-        InvokeRepeating("spawner" , interval , interval);
+        InvokeRepeating("Spawner" , interval , interval);
     }
 
-  private  void spawner()
+  private  void Spawner()
     {
         GameObject istance = Instantiate(pipeSpawn);
         istance.transform.position = new Vector2(x,Random.Range(minY,maxY));

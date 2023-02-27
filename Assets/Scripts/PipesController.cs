@@ -2,23 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pipes_Contollers : MonoBehaviour
+public class PipesController : MonoBehaviour
 {
     public float speed;
-
     public float LifeTime;
-
-
-
-    void Start()
-    {
-        
-    }
-
-    
     void Update()
     {
-        transform.position += Vector3.left * speed *Time.deltaTime;
+        transform.position += Vector3.left * (speed * Time.deltaTime);
         Destroy(gameObject , LifeTime);
     }
 }

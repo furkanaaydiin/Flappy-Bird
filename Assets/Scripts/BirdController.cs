@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Bird_Controller : MonoBehaviour
+public class BirdController : MonoBehaviour
 {
     public float JumpForce;
     Rigidbody2D rb;
-    private int score;
-
+    private int score; 
     public Text TextScore;
 
     public GameObject GameOverPanel;
@@ -19,7 +18,6 @@ public class Bird_Controller : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) )
